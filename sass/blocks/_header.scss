@@ -1,0 +1,27 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0px 12px #476FFF;
+    backdrop-filter: blur(20px);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        .btn {
+            margin-top: 5px;
+        }
+    }
+}

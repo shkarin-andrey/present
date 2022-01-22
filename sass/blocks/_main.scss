@@ -1,0 +1,40 @@
+.main {
+    height: 100vh;
+    padding-top: 100px;
+    position: relative;
+
+    &__title {
+        max-width: 510px;
+        margin-bottom: 20px;
+        span {
+            color: $purple;;
+        }
+    }
+
+    &__info {
+        max-width: 560px;
+    }
+
+    &__description {
+        margin-top: 40px;
+    }
+
+    .messenger {
+        margin-top: 20px;
+    }
+
+    .btn__wrapper {
+        margin-top: 40px;
+        gap: 30px;
+    }
+    &__img-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        img {
+            width: 100%;
+        }
+    }
+}

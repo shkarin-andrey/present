@@ -1,0 +1,35 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/bootstrap-grid.min';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import 'base/variables';
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.phone {
+    text-decoration: none;
+    color: $text;
+    &:hover {
+        text-decoration: none;
+        color: $text;
+    }
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background-color: $blue;
+}
+
+.w-full {
+    width: 100%;
+}
+
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/btn';
+@import 'blocks/main';
+@import 'blocks/title';
+@import 'blocks/mess';
