@@ -1,5 +1,5 @@
 .main {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 100px;
     position: relative;
 
@@ -27,6 +27,7 @@
         margin-top: 40px;
         gap: 30px;
     }
+
     &__img-bg {
         position: absolute;
         bottom: -2px;

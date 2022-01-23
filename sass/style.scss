@@ -21,6 +21,12 @@ p {
     }
 }
 
+.logo {
+    a {
+        display: block;
+    }
+}
+
 .divider {
     width: 100%;
     height: 2px;
@@ -58,6 +64,7 @@ p {
 @import 'blocks/consultation';
 @import 'blocks/order';
 @import 'blocks/shop';
-
-
 @import 'blocks/footer';
+
+
+@import 'blocks/media';

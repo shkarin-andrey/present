@@ -10,13 +10,13 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="row col-12 align-items-center">
-                <div class="logo col-3">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo col-2">
                     <a href="#">
                         <img src="icons/logo/logo.svg" alt="Подарки">
                     </a>
                 </div>
-                <nav class="menu col-6 d-flex justify-content-center">
+                <nav class="menu col-7 d-none d-lg-flex justify-content-center">
                     <ul class="menu__list">
                         <li class="menu__item">
                             <a href="#" class="menu__link">О нас</a>
@@ -34,12 +34,24 @@
                             <a href="#" class="menu__link">Отзывы</a>
                         </li>
                     </ul>
+                    <div class="divider d-lg-none"></div>
+                    <div class="header__info d-flex mt-20 d-lg-none">
+                        <div class="header__phone">
+                            <a href="#" class="phone">+7 (999) 999-99-99</a>
+                        </div>
+                        <button class="btn call__back">Обратный звонок</button>
+                    </div>
                 </nav>
-                <div class="header__info col-3">
+                <div class="header__info d-none d-lg-flex col-lg-3">
                     <div class="header__phone">
                         <a href="#" class="phone">+7 (999) 999-99-99</a>
                     </div>
                     <button class="btn call__back">Обратный звонок</button>
+                </div>
+                <div class="hamburger d-flex flex-column justify-content-between d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -47,8 +59,8 @@
     
     <section class="main">
         <div class="container">
-            <div class="row col-12 align-items-center">
-                <div class="main__info col-6">
+            <div class="row align-items-center">
+                <div class="main__info col-md-7 col-lg-6">
                     <h1 class="title main__title">Мягкие игрушки и <span>подарочные наборы</span></h1>
                     <div class="divider"></div>
                     <p class="main__description">
@@ -70,9 +82,11 @@
                         <button class="btn btn__white">Посмотреть товары</button>
                     </div>
                 </div>
-                <div class="main__img col-6">
-                    <img src="img/main/main-img.png" alt="Мягкие игрушки
-                    и подарочные наборы">
+                <div class="col-md-5 col-lg-6">
+                    <div class="main__img">
+                        <img src="img/main/main-img.png" alt="Мягкие игрушки
+                        и подарочные наборы">
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,8 +99,8 @@
         <div class="container">
             <div class="row">
                 <h2 class="subtitle">О нас</h2>
-                <div class="about__cards d-flex">
-                    <div class="col-4 pe-2">
+                <div class="about__cards d-flex flex-wrap">
+                    <div class="col-12 mb-4 mb-md-0 col-md-4 pe-md-2">
                         <div class="about__card t-center col-12">
                             <div class="about__card-img">
                                 <img src="img/about/img-1.svg" alt="Быстрая доставка">
@@ -97,7 +111,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-4 px-2">
+                    <div class="col-12 mb-4 mb-md-0 col-md-4 px-md-2">
                         <div class="about__card t-center col-12">
                             <div class="about__card-img">
                                 <img src="img/about/img-2.svg" alt="Высокое качество">
@@ -108,7 +122,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-4 ps-2">
+                    <div class="col-12 col-md-4 ps-md-2">
                         <div class="about__card t-center col-12">
                             <div class="about__card-img">
                                 <img src="img/about/img-3.svg" alt="Хорошая репутация">
@@ -132,19 +146,16 @@
                 Просто заполните форму обратной связи и мы перезвоним Вам в течении 10 минут
             </p>
             <div class="row d-flex justify-content-center">
-                <form class="d-flex flex-column align-items-center col-6">
+                <form class="d-flex flex-column align-items-center col-12 offset-md-0 col-md-6">
                     <div class="consultation__form__wrapper d-flex flex-column w-full">
-                        <!-- <label for="consultation-text">Ваше имя:</label> -->
                         <input id="consultation-text" name="consultation-text" type="text" placeholder="Введите свое имя">
                     </div>
 
                     <div class="consultation__form__wrapper d-flex flex-column w-full">
-                        <!-- <label for="consultation-tel">Ваш номер:</label> -->
                         <input id="consultation-tel" name="consultation-tel" type="tel" placeholder="Введите свой телефонный номер">
                     </div>
                     
                     <div class="consultation__form__wrapper d-flex flex-column w-full">
-                        <!-- <label for="consultation-email">Ваш E-mail:</label> -->
                         <input id="consultation-email" name="consultation-email" type="email" placeholder="Введите свой E-mail">
                     </div>
 
@@ -158,7 +169,7 @@
         <div class="container">
             <h2 class="subtitle">Товары</h2>
             <div class="row shop__cards">
-                <div class="col-6 t-center">
+                <div class="col-12 mb-4 mb-sm-0 col-sm-6 t-center">
                     <a href="#" class="shop__card">
                         <h3 class="fz-24">Мягкие игрушки</h3>
                         <div class="shop__card-img">
@@ -167,7 +178,7 @@
                         <button class="btn mt-20">Перейти</button>
                     </a>
                 </div>
-                <div class="col-6 t-center">
+                <div class="col-12 mb-4 mb-sm-0 col-sm-6 t-center">
                     <a href="#" class="shop__card">
                         <h3 class="fz-24">Мягкие игрушки</h3>
                         <div class="shop__card-img">
@@ -187,7 +198,7 @@
         <div class="container">
             <h2 class="subtitle">Сделать заказ подарков</h2>
             <div class="row">
-                <form class="col-4 d-flex flex-column">
+                <form class="col-12 col-md-6 col-xl-4 d-flex flex-column">
                     <input name="order-name" placeholder="Введите ваше имя" type="text">
                     <input name="order-phone" placeholder="Введите свой номер телефона" type="tel">
                     <textarea name="order-message" placeholder="Введите сообщение"></textarea>
@@ -204,7 +215,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="footer__col mb-4 mb-md-0 col-12 col-sm-6 col-md-3">
                     <div class="logo">
                         <a href="#">
                             <img src="icons/logo/logo-2.svg" alt="Подарки">
@@ -214,7 +225,7 @@
                         Мягкие игрушки, утки lalafanfan, красивые мужские и женские подарочные наборы часов и браслетов. Оптом и в розницу!.
                     </p>
                 </div>
-                <div class="col-3">
+                <div class="footer__col mb-4 mb-md-0 col-12 col-sm-6 col-md-3">
                     <a href="#" class="footer__top-link">Меню</a>
                     <div class="footer__top d-flex flex-column mt-20">
                         <a href="#" class="footer-link">Мягкие игрушки</a>
@@ -223,7 +234,7 @@
                         <a href="#" class="footer-link">Доставка</a>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="footer__col mb-4 mb-md-0 col-12 col-sm-6 col-md-3">
                     <a href="#" class="footer__top-link">Оплата</a>
                     <div class="footer__top d-flex flex-column mt-20">
                         <div class="footer-link">Сбербанк</div>
@@ -232,7 +243,7 @@
                         
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="footer__col col-12 col-sm-6 col-md-3">
                     <a href="#" class="footer__top-link">Информация</a>
                     <div class="footer__top d-flex flex-column mt-20">
                         <a href="#" class="footer-link">+7 (999) 999-99-99</a>
