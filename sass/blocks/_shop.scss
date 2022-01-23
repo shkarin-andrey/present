@@ -1,0 +1,37 @@
+.shop {
+    background: $blue;
+
+    a {
+        text-decoration: none;
+        &:hover {
+            h3 {
+                color: $purple;
+            }
+        }
+    }
+
+    .subtitle {
+        color: $text-white;
+    }
+
+    &__cards {
+        margin-top: 40px;
+    }
+
+    &__card {
+        padding: 20px;
+        display: block;
+        background: $text-white;
+        border: 4px solid $purple;
+        border-radius: 10px;
+
+        &-img {
+            height: 240px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

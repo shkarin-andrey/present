@@ -1,0 +1,41 @@
+.order {
+    position: relative;
+    background: url('../img/order/order-bg.jpg') center (center / cover) no-repeat;
+    padding-top: 120px;
+
+    &__top-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .subtitle {
+        color: $text-white;
+    }
+
+    form {
+        margin-top: 40px;
+
+        input, textarea {
+            background: $text-white;
+            border: 1px solid #BDBDBD;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            outline: none;
+        }
+        input {
+            height: 50px;
+        }
+
+        textarea {
+            min-height: 150px;
+            padding-top: 10px;
+            resize: none;
+        }
+    }
+}

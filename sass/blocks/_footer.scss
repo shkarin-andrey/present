@@ -1,0 +1,50 @@
+.footer {
+    background: $footer;
+    padding-top: 40px;
+    color: $text-white-800;
+    font-size: 14px;
+    
+    &-link {
+        // position: relative;
+        display: flex;
+        flex-direction:column;
+        line-height: 30px;
+        color: $text-white-800;
+        transition: all .3s;
+        &:hover {
+            color: $text-white-800;
+            text-decoration: none;
+        }
+    }
+
+    &__top {
+        &-link {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.44px;
+            color: $text-white;
+            transition: all .3s;
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 2px;
+                background: $text-white;
+            }
+            &:hover {
+                text-decoration: none;
+                color: $text-white-800;
+            }
+        }
+    }
+
+    .divider {
+        background: $text-white-800;
+        margin-top: 20px;
+    }
+
+    &__bottom {
+        height: 55px;
+    }
+}

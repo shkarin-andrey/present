@@ -8,6 +8,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+p {
+    margin: 0;
+}
+
 .phone {
     text-decoration: none;
     color: $text;
@@ -18,7 +22,7 @@ body {
 }
 
 .divider {
-    width: 50px;
+    width: 100%;
     height: 2px;
     background-color: $blue;
 }
@@ -27,9 +31,33 @@ body {
     width: 100%;
 }
 
+.section-p {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.lh-20 {
+    line-height: 20px !important;
+}
+
 @import 'blocks/header';
 @import 'blocks/menu';
 @import 'blocks/btn';
 @import 'blocks/main';
 @import 'blocks/title';
 @import 'blocks/mess';
+@import 'blocks/about';
+@import 'blocks/consultation';
+@import 'blocks/order';
+@import 'blocks/shop';
+
+
+@import 'blocks/footer';

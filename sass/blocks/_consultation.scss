@@ -1,0 +1,32 @@
+.consultation {
+    .subtitle {
+        color: $blue;
+        span {
+            color: $purple;
+        }
+    }
+
+    form {
+        margin-top: 40px;
+    }
+
+    &__form__wrapper {
+        position: relative;
+        margin-bottom: 20px;
+        label {
+            position: absolute;
+            left: 20px;
+            top: -10px;
+            background-color: $text-white;
+            margin: 0;
+            font-size: 14px;
+        }
+        input {
+            border: 2px solid #476FFF;
+            border-radius: 10px;
+            height: 50px;
+            padding: 0 20px;
+            outline: none;
+        }
+    }
+}

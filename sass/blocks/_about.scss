@@ -1,0 +1,40 @@
+.about {
+    background: $blue;
+    z-index: 1;
+    box-shadow: 0px 4px 20px $blue;
+    
+    .subtitle {
+        color: $text-white;
+    }
+
+    &__cards {
+        margin-top: 40px;
+    }
+
+    &__card {
+        border: 3px solid $purple;
+        border-radius: 10px;
+        background: $text-white;
+        padding: 20px;
+        min-height: 260px;
+
+        p {
+            margin: 0;
+        }
+
+        span {
+            color: $purple;
+        }
+
+        &-img {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
