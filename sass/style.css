@@ -5112,7 +5112,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .header__info {
