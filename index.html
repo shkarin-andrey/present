@@ -46,12 +46,12 @@
     <!-- Style -->
     <link rel="stylesheet" href="sass/style.css">
 </head>
-<body>
+<body style="overflow: overlay">
     <header class="header">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="logo col-2">
-                    <a href="#">
+                    <a href="/">
                         <img src="icons/logo/logo.svg" alt="Подарки">
                     </a>
                 </div>
@@ -85,7 +85,7 @@
                     <div class="header__phone">
                         <a href="tel:+79272971619" class="phone">+7 (927) 297-16-19</a>
                     </div>
-                    <button class="btn call__back">Обратный звонок</button>
+                    <button class="btn call__back js-open">Обратный звонок</button>
                 </div>
                 <div class="hamburger d-flex flex-column justify-content-between d-lg-none">
                     <span></span>
@@ -117,7 +117,7 @@
                         </a>
                     </div>
                     <div class="btn__wrapper d-flex">
-                        <button class="btn">Заказать</button>
+                        <button class="btn js-open">Заказать</button>
                         <button class="btn btn__white">Посмотреть товары</button>
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                         <div class="shop__card-img">
                             <img src="img/shop/shop-1.png" alt="Утки lalafanfan">
                         </div>
-                        <button class="btn mt-20">Перейти</button>
+                        <button class="btn mt-20 js-open">Перейти</button>
                     </a>
                 </div>
                 <div class="col-12 mb-4 mb-sm-0 col-sm-6 t-center">
@@ -223,7 +223,7 @@
                         <div class="shop__card-img">
                             <img src="img/shop/shop-2.png" alt="Подарочные наборы часов">
                         </div>
-                        <button class="btn mt-20">Перейти</button>
+                        <button class="btn mt-20 js-open">Перейти</button>
                     </a>
                 </div>
             </div>
@@ -310,8 +310,27 @@
             </div>
         </div>
     </footer>
-    
-    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <div class="modal align-items-center modal__hidden">
+        <div class="container">
+            <div class="row">
+                <div class="modal__wrapper col-12 col-md-6 col-xl-4 offset-md-3 offset-xl-4">
+                    <div class="modal__close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h2 class="subtitle">Получить консультацию у специалиста</h2>
+                    <p>Консультант перезвонит в течении 10 минут</p>
+                    <form method="post" id="modalForm" class="d-flex flex-column">
+                        <input name="modal-name" placeholder="Введите ваше имя*" type="text" required>
+                        <input name="modal-phone" placeholder="Введите свой номер телефона*" type="tel" required>
+                        <button class="btn mt-2">Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
