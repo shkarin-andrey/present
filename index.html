@@ -78,7 +78,7 @@
                         <div class="header__phone">
                             <a href="tel:+79272971619" class="phone">+7 (927) 297-16-19</a>
                         </div>
-                        <button class="btn call__back">Обратный звонок</button>
+                        <button class="btn call__back js-open">Обратный звонок</button>
                     </div>
                 </nav>
                 <div class="header__info d-none d-lg-flex col-lg-3">
@@ -185,17 +185,17 @@
                 Просто заполните форму обратной связи и мы перезвоним Вам в течении 10 минут
             </p>
             <div class="row d-flex justify-content-center">
-                <form class="d-flex flex-column align-items-center col-12 offset-md-0 col-md-6">
+                <form id="consultation" class="d-flex flex-column align-items-center col-12 offset-md-0 col-md-6">
                     <div class="consultation__form__wrapper d-flex flex-column w-full">
-                        <input id="consultation-text" name="consultation-text" type="text" placeholder="Введите свое имя">
+                        <input id="consultation-text" name="consultation-text" type="text" placeholder="Введите свое имя*" required>
                     </div>
 
                     <div class="consultation__form__wrapper d-flex flex-column w-full">
-                        <input id="consultation-tel" name="consultation-tel" type="tel" placeholder="Введите свой телефонный номер">
+                        <input id="consultation-tel" name="consultation-tel" type="tel" placeholder="Введите свой телефонный номер*" required>
                     </div>
                     
                     <div class="consultation__form__wrapper d-flex flex-column w-full">
-                        <input id="consultation-email" name="consultation-email" type="email" placeholder="Введите свой E-mail">
+                        <input id="consultation-email" name="consultation-email" type="email" placeholder="Введите свой E-mail*" required>
                     </div>
 
                     <button class="btn mt-1">Получить консультацию</button>
@@ -237,10 +237,10 @@
         <div class="container">
             <h2 class="subtitle">Сделать заказ подарков</h2>
             <div class="row">
-                <form class="col-12 col-md-6 col-xl-4 d-flex flex-column">
-                    <input name="order-name" placeholder="Введите ваше имя" type="text">
-                    <input name="order-phone" placeholder="Введите свой номер телефона" type="tel">
-                    <textarea name="order-message" placeholder="Введите сообщение"></textarea>
+                <form id="order" class="col-12 col-md-6 col-xl-4 d-flex flex-column">
+                    <input name="order-name" placeholder="Введите ваше имя*" type="text" required>
+                    <input name="order-phone" placeholder="Введите свой номер телефона*" type="tel" required>
+                    <textarea name="order-message" placeholder="Введите сообщение*" required></textarea>
                     <button class="btn mt-2">Заказать</button>
                 </form>
             </div>
@@ -248,7 +248,7 @@
     </section>
 
     <div class="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa4ec8cabca7f8b9999a447b1f17e37c5faea548e823b763cda3dd0f6ac5d76b7&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+        <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa4ec8cabca7f8b9999a447b1f17e37c5faea548e823b763cda3dd0f6ac5d76b7&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
     </div>
 
     <footer class="footer">
@@ -319,18 +319,25 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <h2 class="subtitle">Получить консультацию у специалиста</h2>
-                    <p>Консультант перезвонит в течении 10 минут</p>
-                    <form method="post" id="modalForm" class="d-flex flex-column">
-                        <input name="modal-name" placeholder="Введите ваше имя*" type="text" required>
-                        <input name="modal-phone" placeholder="Введите свой номер телефона*" type="tel" required>
-                        <button class="btn mt-2">Заказать звонок</button>
-                    </form>
+                    <div class="modal__form">
+                        <h2 class="subtitle">Получить консультацию у специалиста</h2>
+                        <p>Консультант перезвонит в течении 10 минут</p>
+                        <form id="modalForm" class="d-flex flex-column">
+                            <input name="modal-name" placeholder="Введите ваше имя*" type="text" required>
+                            <input name="modal-phone" placeholder="Введите свой номер телефона*" type="tel" required>
+                            <button class="btn mt-2">Заказать звонок</button>
+                        </form>
+                    </div>
+                    <p class="notice fz_20 modal__hidden">Ваше обращение зафиксированно! <br/>
+                        С Вами свяжутся в течении 10 минут. <br/>
+                        <strong>Спасибо за доверие!</strong>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/imask"></script>
+    
+    <script src="js/imask.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

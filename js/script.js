@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
     // menu
     const hamburger = document.querySelector('.hamburger'),
           menu = document.querySelector('.menu');
@@ -41,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.modal')
     const close = document.querySelector('.modal__close')
     const open = document.querySelectorAll('.js-open')
+    const notic = modal.querySelector('.notice')
+    const classModalForm = modal.querySelector('.modal__form')
 
     function overflow() {
         if (modal.classList.contains('modal__hidden')) {
@@ -51,15 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     overflow()
 
-    function modalOpen(btn) {
-        btn.addEventListener('click', () => {
-            modal.classList.remove('modal__hidden')
-            modal.classList.add('modal__show-animate')
-            overflow()
-            setTimeout(() => {
-                modal.classList.remove('modal__show-animate')
-            }, 500)
-        })
+    function modalOpen() {
+        modal.classList.remove('modal__hidden')
+        modal.classList.add('modal__show-animate')
+        overflow()
+        setTimeout(() => {
+            modal.classList.remove('modal__show-animate')
+        }, 500)
     }
 
     function modalHide() {
@@ -68,37 +67,67 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.remove('modal__hidden-animate')
             modal.classList.add('modal__hidden')
             overflow()
+            classModalForm.classList.remove('modal__hidden')
+            notic.classList.remove('modal__show')
         }, 500)
     }
 
-    open.forEach(btn => modalOpen(btn))
+    function closeModal() {
+        setTimeout(() => {
+            modalHide()
+            setTimeout(() => {
+                classModalForm.classList.remove('modal__hidden')
+                notic.classList.remove('modal__show')
+            }, 500)
+        }, 3000)
+    }
+
+    function notice() {
+        modalHide()
+        setTimeout(() => {
+            classModalForm.classList.add('modal__hidden')
+            notic.classList.add('modal__show')
+            modalOpen()
+        }, 500)
+        closeModal()
+    }
+
+    open.forEach(btn => {
+        btn.addEventListener('click', modalOpen)
+    })
 
     close.addEventListener('click', modalHide)
 
 
     // form
     const modalForm = document.querySelector('#modalForm')
-    modalForm.addEventListener('submit', formSend)
+    const consultation = document.querySelector('#consultation')
+    const order = document.querySelector('#order')
 
-    async function formSend(e) {
-        e.preventDefault()
-        let formData = new FormData(modalForm)
-        let response = await fetch('mailer/smart.php', {
+    modalForm.addEventListener('submit', () => formSend('mailer/smartModal.php', modalForm))
+    consultation.addEventListener('submit', () => formSend('mailer/smartConsultation.php', consultation))
+    order.addEventListener('submit', () => formSend('mailer/smartOrder.php', order))
+
+    async function formSend(url, form) {
+        window.event.preventDefault()
+
+        let formData = new FormData(form)
+        let response = await fetch(url, {
             method: 'POST',
             body: formData
         })
         if (response.ok) {
-            modalForm.reset();
-            modalHide()
+            form.reset();
+            notice()
         } else alert('Error')
     }
 
 
     // mask tel
-    var elements = document.querySelectorAll('input[type=tel]');
+    const elements = document.querySelectorAll('input[type=tel]');
         for (var i = 0; i < elements.length; i++) {
         new IMask(elements[i], {
-            mask: '+{7}(000)000-00-00',
+            mask: '+{7} (000) 000-00-00',
         });
     }
 

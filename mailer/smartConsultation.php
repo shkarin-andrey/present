@@ -1,7 +1,8 @@
 <?php 
 
-$name = $_POST['modal-name'];
-$phone = $_POST['modal-phone'];
+$name = $_POST['consultation-text'];
+$phone = $_POST['consultation-tel'];
+$email = $_POST['consultation-email'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -17,8 +18,8 @@ $mail->Password = 'mp460plant';                           // Наш пароль
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('shkarinandrew@mail.ru', 'Заказ с сайта Подарков');   // От кого письмо 
-$mail->addAddress('shkarinandrew1@gmail.com');     // Add a recipient
+$mail->setFrom('shkarinandrew@mail.ru', 'Консультация с сайта Подарков');   // От кого письмо 
+$mail->addAddress('shkarinandrew1@gmail.com', 'director.Vladislav@yandex.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -29,9 +30,10 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Данные';
 $mail->Body    = '
-	Пользователь оставил данные <br> 
-	Имя: ' . $name . ' <br>
-	Номер телефона: ' . $phone;
+	<h1>Пользователь оставил данные</h1> <br> 
+	<strong>Имя:</strong> ' . $name . ' <br>
+	<strong>Email:</strong> ' . $email . ' <br>
+	<strong>Номер телефона:</strong> ' . $phone;
 
 if(!$mail->send()) {
     return false;

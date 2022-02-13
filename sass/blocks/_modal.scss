@@ -9,6 +9,11 @@
     color: black;
     display: flex;
 
+    .notice {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__hidden-animate {
         animation: hiddenModal linear .5s;
     }
@@ -17,10 +22,10 @@
     }
 
     &__hidden {
-        display: none;
+        display: none!important;
     }
     &__show {
-        display: flex;
+        display: flex!important;
     }
 
     &__wrapper {

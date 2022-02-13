@@ -5334,6 +5334,10 @@ p {
   font-size: 16px;
 }
 
+.fz_20 {
+  font-size: 20px;
+}
+
 .messenger {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5586,6 +5590,16 @@ p {
   display: flex;
 }
 
+.modal .notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .modal__hidden-animate {
   -webkit-animation: hiddenModal linear .5s;
           animation: hiddenModal linear .5s;
@@ -5597,13 +5611,13 @@ p {
 }
 
 .modal__hidden {
-  display: none;
+  display: none !important;
 }
 
 .modal__show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .modal__wrapper {
